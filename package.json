@@ -1,0 +1,29 @@
+{
+  "name": "nodejs_experiments",
+  "version": "1.0.0",
+  "description": "random experiments",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osukaa/nodejs_experiments.git"
+  },
+  "keywords": [
+    "experiment"
+  ],
+  "author": "Oscar Funes <me@oscarfunes.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osukaa/nodejs_experiments/issues"
+  },
+  "homepage": "https://github.com/osukaa/nodejs_experiments#readme",
+  "dependencies": {
+    "@hapi/hoek": "^9.0.4",
+    "minimist": "^1.2.5"
+  },
+  "volta": {
+    "node": "12.17.0"
+  }
+}
