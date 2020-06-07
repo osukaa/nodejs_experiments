@@ -1,0 +1,27 @@
+{
+  "name": "apollo-hapi",
+  "version": "1.0.0",
+  "description": "testing apollo server hapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [
+    "hapi",
+    "apollo",
+    "graphql"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^3.8.2",
+    "form-data": "^3.0.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "apollo-server-hapi": "^2.14.2",
+    "graphql-upload": "^11.0.0",
+    "make-promises-safe": "^5.1.0"
+  }
+}

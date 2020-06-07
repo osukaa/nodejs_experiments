@@ -14,7 +14,7 @@ for (let key of Object.keys(args)) {
   console.log(key, args[key]);
 }
 
-// node minimist --xyz=asdf --x.y.0.a 123
+// node minimist --xyz=asdf --x.z.a 123
 
 const defaults = {
   x: {
@@ -28,4 +28,4 @@ const defaults = {
 
 const result = Hoek.applyToDefaults(defaults, args);
 
-console.log({ result });
+console.dir({ result }, { depth: null });
