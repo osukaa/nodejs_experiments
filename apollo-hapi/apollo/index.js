@@ -1,7 +1,7 @@
 "use strict";
 
-const { ApolloServer, gql } = require("apollo-server-hapi");
 const { processRequest } = require('graphql-upload');
+const { ApolloServer } = require("apollo-server-hapi");
 
 const plugin = {
   name: "apollo",
@@ -11,11 +11,13 @@ const plugin = {
     await app.applyMiddleware({
       app: server,
       route: {
+        /**
+         * Github fix for hapi upload: https://github.com/apollographql/apollo-server/issues/1680
+         * This works because between onPreAuth and onPostAuth is payload processing
+         * We disable payload processing on PreAuth, and parse the payload with `graphql-upload` module
+         * and set the payload after hapi goes through its own step
+         */
         ext: {
-          /**
-           * Github fix for hapi upload:
-           * https://github.com/apollographql/apollo-server/issues/1680
-           */
           onPreAuth: {
             method: async function (request, h) {
               // trick hapi into not parsing the incoming request payload
