@@ -21,7 +21,7 @@
   "homepage": "https://github.com/osukaa/nodejs_experiments#readme",
   "dependencies": {
     "@hapi/hoek": "^9.0.4",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.6"
   },
   "volta": {
     "node": "12.17.0"
